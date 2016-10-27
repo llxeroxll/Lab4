@@ -12,5 +12,11 @@ public class ComandoBuscarPessoa implements IComando {
 		pessoa = (Pessoa)crud.buscar(id);
 	}
 
+
+	@Override
+	public void undo(ICRUD crud) {	
+	;	
+	}
+
 }
 

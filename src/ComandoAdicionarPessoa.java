@@ -12,6 +12,15 @@ public class ComandoAdicionarPessoa implements IComando {
 	@Override
 	public void execute(ICRUD crud) {
 		crud.adiciona(id, pessoa);
+		crud.setMemento(this);
+	}
+
+
+	@Override
+	public void undo(ICRUD crud) {
+		crud.deleta(id);
+		crud.setMemento(null);
+		
 	}
 
 }
