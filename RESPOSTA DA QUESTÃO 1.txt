@@ -1,0 +1,25 @@
+1)
+
+Command é a interface de comando
+CommandImpl é um comando concreto
+
+
+Dao é a interface de receptor
+	Dao possui uma lista de comandos declaradas como "final int"
+	como os receptores implementam Dao então todos eles tem acesso à essa lista de comandos
+
+Dao6 e Dao1 são receptores concretos com métodos implementados
+
+Invoker é a classe executor
+
+StudentHandlerThread é a implementação de um servidor que aguarda comandos em um invoker,
+que possui uma porta e um endereço.
+
+
+
+
+Descrição:
+
+A classe StudentHandlerThread é um servidor de comunicação.
+A classe Invoker possui o método invoker que recebe um Dao6 e um Command (genérico)
+e executa o comando usando o método em Dao6 como receptor.

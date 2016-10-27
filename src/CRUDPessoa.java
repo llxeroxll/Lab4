@@ -2,7 +2,7 @@ import java.util.HashMap;
 
 
 public class CRUDPessoa implements ICRUD<Long, Pessoa, IComando> {
-												public HashMap<Long, Pessoa> pessoas;
+	public HashMap<Long, Pessoa> pessoas; //Públic apenas para facilitar testes, mudar para private e implementar toString
 	private IComando memento;
 	 
 	
